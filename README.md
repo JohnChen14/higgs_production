@@ -3,8 +3,8 @@
 
 2. 如果你未配置python环境，你可以选择使用Docker以及提供的带LHAPDF的jupyter notebook镜像文件来快速构建所需要的虚拟环境。Docker可以在官网 https://www.docker.com/products/docker-desktop/ 中下载。
 
-   在安装并运行docker之后，可以在文件夹`LHAPDF_docker_build`中打开终端，并运行
-     > chmod +x build_image.sh; ./build_image
+   在安装并运行docker之后，可以在文件夹`LHAPDF_docker_build/docker_file`中打开终端，并运行
+     > docker build --no-cache -t lhapdf-scipy-nb:1.0 .
    
    来构建所需要的镜像。里面使用了https://hub.docker.com/r/jupyter/scipy-notebook 提供的`python-3.8.8`版本的镜像。
 
